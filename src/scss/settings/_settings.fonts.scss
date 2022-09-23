@@ -1,0 +1,73 @@
+@use 'sass:math';
+@use 'sass:map';
+@use 'settings.breakpoints' as breakpointsModule;
+
+@function _pixelsToRem($pixels) {
+  $units: math.div($pixels, 1px);
+  $fractionRem: math.div($units, 16);
+
+  @return $fractionRem * 1rem;
+}
+
+@mixin _mediaQueryFrom($bpRef) {
+  @if (map.has-key(breakpointsModule.$breakpoints, $bpRef)) {
+    @media screen and (min-width: map.get(breakpointsModule.$breakpoints, $bpRef)) {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: $bpRef) {
+      @content;
+    }
+  }
+}
+
+:root {
+  --font-name: 'Poppins', sans-serif;
+  --h1-font-size: #{_pixelsToRem(36px)};
+  --h1-font-line-height: 43px;
+  --h1-font-weight: 700;
+  --h2-font-size: #{_pixelsToRem(32px)};
+  --h2-font-line-height: 38px;
+  --h2-font-weight: 700;
+  --h3-font-size: #{_pixelsToRem(28px)};
+  --h3-font-line-height: 33px;
+  --h3-font-weight: 700;
+  --h4-font-size: #{_pixelsToRem(24px)};
+  --h4-font-line-height: 29px;
+  --h4-font-weight: 700;
+  --h5-font-size: #{_pixelsToRem(20px)};
+  --h5-font-line-height: 25px;
+  --h5-font-weight: 700;
+  --h6-font-size: #{_pixelsToRem(20px)};
+  --h6-font-line-height: 25px;
+  --h6-font-weight: 400;
+  --subtitle-font-size: #{_pixelsToRem(16px)};
+  --subtitle-font-line-height: 20px;
+  --subtitle-font-weight: 700;
+  --body-font-size: #{_pixelsToRem(16px)};
+  --body-font-line-height: 20px;
+  --body-font-weight: 400;
+  --caption-font-size: #{_pixelsToRem(12px)};
+  --caption-font-line-height: 14px;
+  --caption-font-weight: 700;
+  --small-font-size: #{_pixelsToRem(12px)};
+  --small-font-line-height: 14px;
+  --small-font-weight: 400;
+  --base-font-size: 14.8px;
+  @include _mediaQueryFrom('sm') {
+    --base-font-size: 16.8px;
+  }
+}
+
+$validFonts: (
+  'h1',
+  'h2',
+  'h3',
+  'h4',
+  'h5',
+  'h6',
+  'subtitle',
+  'body',
+  'caption',
+  'small'
+);

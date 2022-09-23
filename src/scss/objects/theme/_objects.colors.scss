@@ -1,0 +1,4 @@
+@use '../../tools/tools.mixins' as mixinsModule;
+
+// EXAMPLE: o-color-primary-pink-100
+@include mixinsModule.colorsFromGlobalVariables('o');

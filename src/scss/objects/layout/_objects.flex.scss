@@ -1,0 +1,328 @@
+@use '../../tools/tools.mixins' as mixinsModule;
+
+.o-flex {
+  display: flex;
+  @for $count from 0 through 16 {
+    &-gap-#{$count * .25 * 16} {
+      gap: $count * .25rem;
+    }
+  }
+  &-row {
+    flex-direction: row;
+    &-reverse {
+      flex-direction: row-reverse;
+    }
+  }
+  &-column {
+    flex-direction: column;
+    &-reverse {
+      flex-direction: column-reverse;
+    }
+  }
+  &-equal {
+    flex: 1;
+  }
+  &-wrap {
+    flex-wrap: wrap;
+    &-reverse {
+      flex-wrap: wrap-reverse;
+    }
+  }
+  &-nowrap {
+    flex-wrap: nowrap;
+  }
+  // FLEX ITEMS PROPERTIES
+  &-justify-start {
+    justify-content: flex-start;
+  }
+  &-justify-end {
+    justify-content: flex-end;
+  }
+  &-justify-around {
+    justify-content: space-around;
+  }
+  &-justify-between {
+    justify-content: space-between;
+  }
+  &-justify-evenly {
+    justify-content: space-evenly;
+  }
+  &-justify-center {
+    justify-content: center;
+  }
+  &-align-baseline {
+    align-items: baseline;
+  }
+  &-align-center {
+    align-items: center;
+  }
+  &-align-start {
+    align-items: flex-start;
+  }
+  &-align-end {
+    align-items: flex-end;
+  }
+  &-align-stretch {
+    align-items: stretch;
+  }
+  @include mixinsModule.mediaQueryFrom('sm') {
+    @for $count from 0 through 16 {
+      &-gap-sm-#{$count * .25 * 16} {
+        gap: $count * .25rem;
+      }
+    }
+    &-sm-row {
+      flex-direction: row;
+      &-reverse {
+        flex-direction: row-reverse;
+      }
+    }
+    &-sm-column {
+      flex-direction: column;
+      &-reverse {
+        flex-direction: column-reverse;
+      }
+    }
+    &-sm-equal {
+      flex: 1;
+    }
+    &-sm-wrap {
+      flex-wrap: wrap;
+      &-reverse {
+        flex-wrap: wrap-reverse;
+      }
+    }
+    &-sm-nowrap {
+      flex-wrap: nowrap;
+    }
+    // FLEX ITEMS PROPERTIES
+    &-sm-justify-start {
+      justify-content: flex-start;
+    }
+    &-sm-justify-end {
+      justify-content: flex-end;
+    }
+    &-sm-justify-around {
+      justify-content: space-around;
+    }
+    &-sm-justify-between {
+      justify-content: space-between;
+    }
+    &-sm-justify-evenly {
+      justify-content: space-evenly;
+    }
+    &-sm-justify-center {
+      justify-content: center;
+    }
+    &-sm-align-baseline {
+      align-items: baseline;
+    }
+    &-sm-align-center {
+      align-items: center;
+    }
+    &-sm-align-start {
+      align-items: flex-start;
+    }
+    &-sm-align-end {
+      align-items: flex-end;
+    }
+    &-sm-align-stretch {
+      align-items: stretch;
+    }
+  }
+  @include mixinsModule.mediaQueryFrom('md') {
+    @for $count from 0 through 16 {
+      &-gap-md-#{$count * .25 * 16} {
+        gap: $count * .25rem;
+      }
+    }
+    &-md-row {
+      flex-direction: row;
+      &-reverse {
+        flex-direction: row-reverse;
+      }
+    }
+    &-md-column {
+      flex-direction: column;
+      &-reverse {
+        flex-direction: column-reverse;
+      }
+    }
+    &-md-equal {
+      flex: 1;
+    }
+    &-md-wrap {
+      flex-wrap: wrap;
+      &-reverse {
+        flex-wrap: wrap-reverse;
+      }
+    }
+    &-md-nowrap {
+      flex-wrap: nowrap;
+    }
+    // FLEX ITEMS PROPERTIES
+    &-md-justify-start {
+      justify-content: flex-start;
+    }
+    &-md-justify-end {
+      justify-content: flex-end;
+    }
+    &-md-justify-around {
+      justify-content: space-around;
+    }
+    &-md-justify-between {
+      justify-content: space-between;
+    }
+    &-md-justify-evenly {
+      justify-content: space-evenly;
+    }
+    &-md-justify-center {
+      justify-content: center;
+    }
+    &-md-align-baseline {
+      align-items: baseline;
+    }
+    &-md-align-center {
+      align-items: center;
+    }
+    &-md-align-start {
+      align-items: flex-start;
+    }
+    &-md-align-end {
+      align-items: flex-end;
+    }
+    &-md-align-stretch {
+      align-items: stretch;
+    }
+  }
+  @include mixinsModule.mediaQueryFrom('lg') {
+    @for $count from 0 through 16 {
+      &-gap-lg-#{$count * .25 * 16} {
+        gap: $count * .25rem;
+      }
+    }
+    &-lg-row {
+      flex-direction: row;
+      &-reverse {
+        flex-direction: row-reverse;
+      }
+    }
+    &-lg-column {
+      flex-direction: column;
+      &-reverse {
+        flex-direction: column-reverse;
+      }
+    }
+    &-lg-equal {
+      flex: 1;
+    }
+    &-lg-wrap {
+      flex-wrap: wrap;
+      &-reverse {
+        flex-wrap: wrap-reverse;
+      }
+    }
+    &-lg-nowrap {
+      flex-wrap: nowrap;
+    }
+    // FLEX ITEMS PROPERTIES
+    &-lg-justify-start {
+      justify-content: flex-start;
+    }
+    &-lg-justify-end {
+      justify-content: flex-end;
+    }
+    &-lg-justify-around {
+      justify-content: space-around;
+    }
+    &-lg-justify-between {
+      justify-content: space-between;
+    }
+    &-lg-justify-evenly {
+      justify-content: space-evenly;
+    }
+    &-lg-justify-center {
+      justify-content: center;
+    }
+    &-lg-align-baseline {
+      align-items: baseline;
+    }
+    &-lg-align-center {
+      align-items: center;
+    }
+    &-lg-align-start {
+      align-items: flex-start;
+    }
+    &-lg-align-end {
+      align-items: flex-end;
+    }
+    &-lg-align-stretch {
+      align-items: stretch;
+    }
+  }
+  @include mixinsModule.mediaQueryFrom('xl') {
+    @for $count from 0 through 16 {
+      &-gap-xl-#{$count * .25 * 16} {
+        gap: $count * .25rem;
+      }
+    }
+    &-xl-row {
+      flex-direction: row;
+      &-reverse {
+        flex-direction: row-reverse;
+      }
+    }
+    &-xl-column {
+      flex-direction: column;
+      &-reverse {
+        flex-direction: column-reverse;
+      }
+    }
+    &-xl-equal {
+      flex: 1;
+    }
+    &-xl-wrap {
+      flex-wrap: wrap;
+      &-reverse {
+        flex-wrap: wrap-reverse;
+      }
+    }
+    &-xl-nowrap {
+      flex-wrap: nowrap;
+    }
+    // FLEX ITEMS PROPERTIES
+    &-xl-justify-start {
+      justify-content: flex-start;
+    }
+    &-xl-justify-end {
+      justify-content: flex-end;
+    }
+    &-xl-justify-around {
+      justify-content: space-around;
+    }
+    &-xl-justify-between {
+      justify-content: space-between;
+    }
+    &-xl-justify-evenly {
+      justify-content: space-evenly;
+    }
+    &-xl-justify-center {
+      justify-content: center;
+    }
+    &-xl-align-baseline {
+      align-items: baseline;
+    }
+    &-xl-align-center {
+      align-items: center;
+    }
+    &-xl-align-start {
+      align-items: flex-start;
+    }
+    &-xl-align-end {
+      align-items: flex-end;
+    }
+    &-xl-align-stretch {
+      align-items: stretch;
+    }
+  }
+}

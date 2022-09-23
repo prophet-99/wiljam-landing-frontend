@@ -1,0 +1,17 @@
+@use 'sass:math';
+
+// COVERT PIXEL VALUE TO REM VALUE
+@function pixelsToRem($pixels) {
+  $units: math.div($pixels, 1px);
+  $fractionRem: math.div($units, 16);
+
+  @return $fractionRem * 1rem;
+}
+
+// COVERT PIXEL VALUE TO EM VALUE
+@function pixelsToEm($pixels) {
+  $units: math.div($pixels, 1px);
+  $fractionEm: math.div($units, 16);
+
+  @return $fractionEm * 1em;
+}

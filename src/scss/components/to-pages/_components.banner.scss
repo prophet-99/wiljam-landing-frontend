@@ -1,0 +1,16 @@
+@use './../../tools/tools.mixins' as mixinsModule;
+
+.c-banner {
+  background-color: var(--primary-color-blue-100);
+  &__title {
+    @include mixinsModule.getFontStyles('h1');
+  }
+  &__text {
+    font-size: 1.125rem;
+  }
+  &__subtitle {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 768px;
+  }
+}

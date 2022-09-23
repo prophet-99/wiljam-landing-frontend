@@ -1,0 +1,17 @@
+@use '../../tools/tools.mixins' as mixinsModule;
+
+.o-container {
+  padding: 5rem 1rem;
+  @include mixinsModule.mediaQueryFrom('sm') {
+    padding: 5rem 2rem;
+  }
+  @include mixinsModule.mediaQueryFrom('md') {
+    padding: 6rem 2rem;
+  }
+  @include mixinsModule.mediaQueryFrom('lg') {
+    padding: 6rem 4rem;
+  }
+  @include mixinsModule.mediaQueryFrom('xl') {
+    padding: 6rem;
+  }
+}

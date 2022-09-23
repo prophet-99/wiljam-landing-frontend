@@ -1,0 +1,14 @@
+@use './../../tools/tools.mixins' as mixinsModule;
+
+.c-about {
+  &__image {
+    max-width: 25rem;
+    height: auto;
+  }
+  &__title {
+    @include mixinsModule.getFontStyles('h1');
+  }
+  &__text {
+    font-size: 1.125rem;
+  }
+}

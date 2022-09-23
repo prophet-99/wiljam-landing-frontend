@@ -1,0 +1,50 @@
+@use './../../tools/tools.mixins' as mixinsModule;
+
+.c-gallery {
+  overflow: hidden;
+  &__title {
+    @include mixinsModule.getFontStyles('h1');
+  }
+  &__text {
+    font-size: 1.125rem;
+  }
+  &__subtitle {
+    max-width: 768px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  &__card {
+    border-radius: 0.25rem;
+    background: hsl(210deg, 38%, 94%);
+    &-img {
+      height: 16rem;
+      border-top-right-radius: 0.25rem;
+      border-top-left-radius: 0.25rem;
+      @include mixinsModule.mediaQueryFrom('sm') {
+        height: 20rem;
+      }
+    }
+  }
+  &__container {
+    position: relative;
+  }
+  &__decoration {
+    z-index: var(--z-back);
+    position: absolute;
+    width: 8rem;
+    height: 8rem;
+    opacity: 0.5;
+    pointer-events: none;
+    fill: #a0aec0;
+    &--top {
+      top: 0;
+      right: 0;
+      transform: translate(30%, -30%);
+    }
+    &--bottom {
+      bottom: 0;
+      left: 0;
+      transform: translate(-30%, 30%);
+    }
+  }
+}

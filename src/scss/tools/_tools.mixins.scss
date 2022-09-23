@@ -1,0 +1,47 @@
+@use 'sass:map';
+@use 'sass:list';
+@use './../settings/settings.breakpoints' as breakpointsModule;
+@use './../settings/settings.colors' as colorsModule;
+@use './../settings/settings.fonts' as fontsModule;
+
+// USED IN MEDIA QUERIES WIT breakpoints MAP
+@mixin mediaQueryFrom($bpRef) {
+  @if (map.has-key(breakpointsModule.$breakpoints , $bpRef)) {
+    @media screen and (
+      min-width: map.get(breakpointsModule.$breakpoints, $bpRef) 
+    ) {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: $bpRef) {
+      @content;
+    }
+  }
+}
+
+// GENERATE BACKGROUND COLORS FROM THE sassColors MAP
+@mixin backgroundsFromGlobalVariables($selectorPrefix) {
+  @each $key, $value in colorsModule.$sassColors {
+    .#{$selectorPrefix}-bg-#{$key} {
+      background: $value;
+    }
+  }
+}
+
+// GENERATE COLORS FROM THE sassColors MAP
+@mixin colorsFromGlobalVariables($selectorPrefix) {
+  @each $key, $value in colorsModule.$sassColors {
+    .#{$selectorPrefix}-color-#{$key} {
+      color: $value;
+    }
+  }
+}
+
+// GENERATE FONT STYLES FROM THE validFonts LIST
+@mixin getFontStyles($keyFont) {
+  @if (list.index(fontsModule.$validFonts, $keyFont)) {
+    font-size: var(--#{$keyFont}-font-size);
+    font-weight: var(--#{$keyFont}-font-weight);
+    line-height: var(--#{$keyFont}-font-line-height);
+  }
+}

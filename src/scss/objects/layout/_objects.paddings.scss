@@ -1,0 +1,157 @@
+@use '../../tools/tools.mixins' as mixinsModule;
+
+@for $count from 0 through 16 {
+  .o-p-#{$count * .25 * 16} {
+    padding: $count * .25rem;
+  }
+}
+
+@for $count from 0 through 16 {
+  .o-pt-#{$count * .25 * 16} {
+    padding-top: $count * .25rem;
+  }
+}
+
+@for $count from 0 through 16 {
+  .o-pr-#{$count * .25 * 16} {
+    padding-right: $count * .25rem;
+  }
+}
+
+@for $count from 0 through 16 {
+  .o-pb-#{$count * .25 * 16} {
+    padding-bottom: $count * .25rem;
+  }
+}
+
+@for $count from 0 through 16 {
+  .o-pl-#{$count * .25 * 16} {
+    padding-left: $count * .25rem;
+  }
+}
+
+@for $count from 0 through 16 {
+  .o-py-#{$count * .25 * 16} {
+    padding-top: $count * .25rem;
+    padding-bottom: $count * .25rem;
+  }
+}
+
+@for $count from 0 through 16 {
+  .o-px-#{$count * .25 * 16} {
+    padding-right: $count * .25rem;
+    padding-left: $count * .25rem;
+  }
+}
+
+@include mixinsModule.mediaQueryFrom('sm') {
+  @for $count from 0 through 16 {
+    .o-p-sm-#{$count * .25 * 16} {
+      padding: $count * .25rem;
+    }
+    .o-pt-sm-#{$count * .25 * 16} {
+      padding-top: $count * .25rem;
+    }
+    .o-pr-sm-#{$count * .25 * 16} {
+      padding-right: $count * .25rem;
+    }
+    .o-pb-sm-#{$count * .25 * 16} {
+      padding-bottom: $count * .25rem;
+    }
+    .o-pl-sm-#{$count * .25 * 16} {
+      padding-left: $count * .25rem;
+    }
+    .o-py-sm-#{$count * .25 * 16} {
+      padding-top: $count * .25rem;
+      padding-bottom: $count * .25rem;
+    }
+    .o-px-sm-#{$count * .25 * 16} {
+      padding-right: $count * .25rem;
+      padding-left: $count * .25rem;
+    }
+  }
+}
+
+@include mixinsModule.mediaQueryFrom('md') {
+  @for $count from 0 through 16 {
+    .o-p-md-#{$count * .25 * 16} {
+      padding: $count * .25rem;
+    }
+    .o-pt-md-#{$count * .25 * 16} {
+      padding-top: $count * .25rem;
+    }
+    .o-pr-md-#{$count * .25 * 16} {
+      padding-right: $count * .25rem;
+    }
+    .o-pb-md-#{$count * .25 * 16} {
+      padding-bottom: $count * .25rem;
+    }
+    .o-pl-md-#{$count * .25 * 16} {
+      padding-left: $count * .25rem;
+    }
+    .o-py-md-#{$count * .25 * 16} {
+      padding-top: $count * .25rem;
+      padding-bottom: $count * .25rem;
+    }
+    .o-px-md-#{$count * .25 * 16} {
+      padding-right: $count * .25rem;
+      padding-left: $count * .25rem;
+    }
+  }
+}
+
+@include mixinsModule.mediaQueryFrom('lg') {
+  @for $count from 0 through 16 {
+    .o-p-lg-#{$count * .25 * 16} {
+      padding: $count * .25rem;
+    }
+    .o-pt-lg-#{$count * .25 * 16} {
+      padding-top: $count * .25rem;
+    }
+    .o-pr-lg-#{$count * .25 * 16} {
+      padding-right: $count * .25rem;
+    }
+    .o-pb-lg-#{$count * .25 * 16} {
+      padding-bottom: $count * .25rem;
+    }
+    .o-pl-lg-#{$count * .25 * 16} {
+      padding-left: $count * .25rem;
+    }
+    .o-py-lg-#{$count * .25 * 16} {
+      padding-top: $count * .25rem;
+      padding-bottom: $count * .25rem;
+    }
+    .o-px-lg-#{$count * .25 * 16} {
+      padding-right: $count * .25rem;
+      padding-left: $count * .25rem;
+    }
+  }
+}
+
+@include mixinsModule.mediaQueryFrom('xl') {
+  @for $count from 0 through 16 {
+    .o-p-xl-#{$count * .25 * 16} {
+      padding: $count * .25rem;
+    }
+    .o-pt-xl-#{$count * .25 * 16} {
+      padding-top: $count * .25rem;
+    }
+    .o-pr-xl-#{$count * .25 * 16} {
+      padding-right: $count * .25rem;
+    }
+    .o-pb-xl-#{$count * .25 * 16} {
+      padding-bottom: $count * .25rem;
+    }
+    .o-pl-xl-#{$count * .25 * 16} {
+      padding-left: $count * .25rem;
+    }
+    .o-py-xl-#{$count * .25 * 16} {
+      padding-top: $count * .25rem;
+      padding-bottom: $count * .25rem;
+    }
+    .o-px-xl-#{$count * .25 * 16} {
+      padding-right: $count * .25rem;
+      padding-left: $count * .25rem;
+    }
+  }
+}

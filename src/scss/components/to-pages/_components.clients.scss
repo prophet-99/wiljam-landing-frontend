@@ -1,0 +1,123 @@
+@use './../../tools/tools.mixins' as mixinsModule;
+
+.c-clients {
+  position: relative;
+  overflow: hidden;
+  &__title {
+    @include mixinsModule.getFontStyles('h1');
+  }
+  &__text {
+    font-size: 1.125rem;
+  }
+  &__swiper-wrap {
+    position: relative;
+  }
+  &__swiper-controls {
+    display: flex;
+    z-index: var(--z-fixed);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+    border: 1px solid var(--neutral-color-lead-70);
+    border-top-left-radius: 1.5rem;
+    background-color: var(--neutral-color-white-100);
+    gap: 0.5rem;
+    button {
+      width: 40px;
+      height: 40px;
+      padding: 0.5rem;
+      border: 0;
+      border-radius: 50%;
+      background-color: var(--primary-color-blue-100);
+      color: var(--neutral-color-white-100);
+      cursor: pointer;
+    }
+  }
+  &__swiper {
+    width: 250px;
+    height: 20rem;
+    @include mixinsModule.mediaQueryFrom('xsm') {
+      width: 300px;
+    }
+    @include mixinsModule.mediaQueryFrom(420px) {
+      width: 350px;
+    }
+    @include mixinsModule.mediaQueryFrom('sm') {
+      width: 500px;
+      height: 24rem;
+    }
+    @include mixinsModule.mediaQueryFrom('md') {
+      width: 600px;
+    }
+    @include mixinsModule.mediaQueryFrom('lg') {
+      width: 500px;
+      height: 36rem;
+    }
+    @include mixinsModule.mediaQueryFrom('xl') {
+      width: 600px;
+    }
+  }
+  &__blockquote {
+    width: 250px;
+    margin: auto;
+    @include mixinsModule.mediaQueryFrom('xsm') {
+      width: 300px;
+    }
+    @include mixinsModule.mediaQueryFrom(420px) {
+      width: 350px;
+    }
+    @include mixinsModule.mediaQueryFrom('sm') {
+      width: 500px;
+    }
+    @include mixinsModule.mediaQueryFrom('md') {
+      width: 600px;
+    }
+    @include mixinsModule.mediaQueryFrom('lg') {
+      width: 100%;
+    }
+  }
+  &__swiper-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.25rem;
+  }
+  &__quote {
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    color: var(--primary-color-blue-100);
+    opacity: 0.75;
+    &.is-left {
+      margin-top: -0.75rem;
+      margin-right: 0.25rem;
+    }
+    &.is-right {
+      margin-top: -0.75rem;
+      margin-right: 0.25rem;
+    }
+  }
+  &__decoration-top {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 12rem;
+    height: 12rem;
+    transform: translate(8rem, 2rem);
+    opacity: 0.25;
+    pointer-events: none;
+  }
+  &__decoration-bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 12rem;
+    height: 12rem;
+    transform: translate(-7rem, 0);
+    opacity: 0.25;
+    pointer-events: none;
+  }
+}

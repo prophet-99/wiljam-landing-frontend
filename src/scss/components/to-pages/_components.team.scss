@@ -1,0 +1,26 @@
+@use './../../tools/tools.mixins' as mixinsModule;
+
+.c-team {
+  &__title {
+    @include mixinsModule.getFontStyles('h1');
+  }
+  &__text {
+    font-size: 1.125rem;
+  }
+  &__thumb {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+  }
+  &__profile {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
