@@ -26,6 +26,9 @@
     background-color: var(--neutral-color-white-100);
     gap: 0.5rem;
     button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 40px;
       height: 40px;
       padding: 0.5rem;

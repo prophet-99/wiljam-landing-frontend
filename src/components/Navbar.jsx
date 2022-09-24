@@ -11,9 +11,9 @@ const Navbar = () => {
     <header className="c-navbar">
       <nav className="c-navbar__desktop">
         <StaticImage
+          className="c-navbar__logo"
           alt="WILJAM logo"
           src="../assets/images/brand/example-logo.png"
-          className="c-navbar__logo"
           placeholder="tracedSVG"
         />
         <span

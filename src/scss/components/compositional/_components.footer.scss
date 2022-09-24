@@ -1,0 +1,19 @@
+.c-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-color-blue-100);
+  &__item {
+    a {
+      border-bottom: 2px solid;
+      border-color: transparent;
+      color: var(--neutral-color-white-100);
+      transition: border-color 0.3s;
+      &:hover,
+      &:active {
+        border-color: var(--neutral-color-white-100);
+      }
+    }
+  }
+}
