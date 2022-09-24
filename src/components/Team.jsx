@@ -48,7 +48,7 @@ const Team = () => (
     </article>
     {/* END HEADER SECTION */}
     {/* INIT GRID SECTION */}
-    <article className="o-flex-equal o-grid-container o-grid-container--gap-32">
+    <article className="o-flex-equal o-grid-container o-grid-container--gap-16 o-grid-container--gap-sm-32">
       {[0, 1].map(() => (
         <>
           <div className="o-grid-column-6 o-grid-column-sm-4">

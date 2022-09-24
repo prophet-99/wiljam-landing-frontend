@@ -7,6 +7,7 @@ import Banner from '../components/Banner';
 import Team from '../components/Team';
 import Clients from '../components/Clients';
 import Gallery from '../components/Gallery';
+import Ubication from '../components/Ubication';
 import Footer from '../components/Footer';
 
 const Index = () => (
@@ -18,6 +19,7 @@ const Index = () => (
     <Team />
     <Clients />
     <Gallery />
+    <Ubication />
     <Footer />
   </main>
 );

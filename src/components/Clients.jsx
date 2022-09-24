@@ -103,11 +103,11 @@ const Clients = () => {
         {/* END CONTENT SECTION */}
         {/* INIT BLOCKQUOTE SECTION */}
         <div className="c-clients__blockquote">
-          <section className="o-mb-16">
+          <section className="o-mb-16 o-text-align-center o-text-align-lg-left">
             <h4 className="o-color-primary-blue-100">{currentClient.name}</h4>
-            <small>{currentClient.role}</small>
+            <small className="o-display-block">{currentClient.role}</small>
           </section>
-          <blockquote className="c-clients__text o-m-0">
+          <blockquote className="c-clients__text o-m-0 o-text-align-center o-text-align-lg-left">
             <svg className="c-clients__quote is-left" viewBox="0 0 24 24">
               <path
                 fill="currentColor"

@@ -16,4 +16,14 @@
       }
     }
   }
+  &__icon {
+    color: var(--neutral-color-white-100);
+    font-size: 1.1rem;
+    &:hover {
+      color: var(--neutral-color-lead-100);
+    }
+  }
+  &__copyright {
+    max-width: 315px;
+  }
 }

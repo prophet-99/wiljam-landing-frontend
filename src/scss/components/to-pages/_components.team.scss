@@ -18,9 +18,13 @@
     border-radius: 50%;
   }
   &__profile {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     object-fit: cover;
     border-radius: 50%;
+    @include mixinsModule.mediaQueryFrom('sm') {
+      width: 100px;
+      height: 100px;
+    }
   }
 }
