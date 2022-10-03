@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Ubication = () => (
-  <section className="o-container c-ubication">
+  <section className="o-container c-ubication js-section">
     {/* INIT HEADER SECTION */}
     <p className="o-mb-24 o-color-primary-blue-100 o-text-bold o-text-align-center">
       Ubicación

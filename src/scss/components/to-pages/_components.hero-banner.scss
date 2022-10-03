@@ -2,13 +2,14 @@
 
 %backdrop-position-template {
   z-index: var(--z-back);
-  position: absolute;
+  position: absolute !important; // TO AVOID gatsby-plugin-image bug
   width: 100%;
   height: 100%;
 }
 
 .c-hero-banner {
   position: relative;
+  min-height: 100vh;
   &__image {
     object-fit: cover;
     @extend %backdrop-position-template;

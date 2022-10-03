@@ -33,7 +33,7 @@
   }
   &__mobile {
     display: flex;
-    z-index: var(--z-fixed);
+    z-index: var(--z-modal);
     position: fixed;
     top: 0px;
     right: 0px;

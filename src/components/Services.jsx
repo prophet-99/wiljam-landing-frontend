@@ -47,7 +47,7 @@ const Services = () => {
   ];
 
   return (
-    <section className="o-container c-services">
+    <section className="o-container c-services js-section">
       {/* INIT HEADER SECTION */}
       <p className="o-mb-24 o-color-primary-blue-100 o-text-bold o-text-align-center">
         Servicios

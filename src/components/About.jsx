@@ -3,7 +3,7 @@ import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 
 const About = () => (
-  <section className="o-container c-about o-flex o-flex-align-center o-flex-column o-flex-md-row o-flex-gap-32">
+  <section className="o-container c-about o-flex o-flex-align-center o-flex-column o-flex-md-row o-flex-gap-32 js-section">
     {/* INIT IMAGE SECTION */}
     <article className="o-flex o-flex-align-center o-flex-justify-center o-flex-equal">
       <StaticImage

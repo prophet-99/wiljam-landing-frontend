@@ -16,7 +16,7 @@ const Gallery = () => {
 
   return (
     <>
-      <section className="o-container c-gallery">
+      <section className="o-container c-gallery js-section">
         {/* INIT HEADER SECTION */}
         <p className="o-mb-24 o-color-primary-blue-100 o-text-bold o-text-align-center">
           Galería
@@ -34,8 +34,9 @@ const Gallery = () => {
         {/* END HEADER SECTION */}
         {/* INIT GALLERY SECTION */}
         <article className="c-gallery__container o-grid-container">
-          {[0, 1, 2, 3, 4, 5, 6, 7, 8].map(() => (
+          {[0, 1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
             <div
+              key={i}
               className="c-gallery__card o-grid-column-12 o-grid-column-md-6 o-grid-column-lg-4"
               role="presentation"
               onClick={openDetailModal}

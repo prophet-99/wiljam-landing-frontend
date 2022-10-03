@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import { StaticImage } from 'gatsby-plugin-image';
 
 const Team = () => (
-  <section className="o-container c-team o-flex o-flex-align-center o-flex-column-reverse o-flex-lg-row o-flex-gap-32">
+  <section className="o-container c-team o-flex o-flex-align-center o-flex-column-reverse o-flex-lg-row o-flex-gap-32 js-section">
     {/* INIT HEADER SECTION */}
     <article className="o-flex-equal">
       <p className="o-mb-24 o-color-primary-blue-100 o-text-bold o-text-align-center o-text-align-lg-left">
@@ -49,8 +49,8 @@ const Team = () => (
     {/* END HEADER SECTION */}
     {/* INIT GRID SECTION */}
     <article className="o-flex-equal o-grid-container o-grid-container--gap-16 o-grid-container--gap-sm-32">
-      {[0, 1].map(() => (
-        <>
+      {[0, 1].map((i) => (
+        <Fragment key={i}>
           <div className="o-grid-column-6 o-grid-column-sm-4">
             <div className="o-mb-8 o-flex o-flex-justify-center">
               <StaticImage
@@ -96,7 +96,7 @@ const Team = () => (
               Recursos humanos
             </small>
           </div>
-        </>
+        </Fragment>
       ))}
     </article>
     {/* END GRID SECTION */}

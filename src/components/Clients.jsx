@@ -35,7 +35,7 @@ const Clients = () => {
   const [currentClient, setCurrentClient] = useState(clientList[0]);
 
   return (
-    <section className="o-container c-clients o-flex o-flex-align-center o-flex-column-reverse o-flex-lg-row o-flex-gap-32">
+    <section className="o-container c-clients o-flex o-flex-align-center o-flex-column-reverse o-flex-lg-row o-flex-gap-32 js-section">
       {/* INIT GALLERY SECTION */}
       <article className="c-clients__swiper-wrap">
         <div className="c-clients__swiper-controls">

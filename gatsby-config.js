@@ -6,6 +6,7 @@
 
 module.exports = {
   /* Your site config here */
+  // pathPrefix: '/public',
   plugins: [
     'gatsby-plugin-sass',
     'gatsby-plugin-image',

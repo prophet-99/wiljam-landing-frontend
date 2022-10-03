@@ -1,10 +1,24 @@
 import React from 'react';
-
 import { StaticImage } from 'gatsby-plugin-image';
+
+import {
+  getCellPhoneUtil,
+  redirectToWhatsAppUtil,
+} from '../utils/company.util';
 
 const Navbar = () => {
   const toggleMobileMenu = () => {
     document.querySelector('.js-navbar-mobile').classList.toggle('is-active');
+  };
+
+  const scrollToElement = (position) => {
+    const elementRef = document.querySelectorAll('.js-section')[position];
+    const elementRefOffset = elementRef.getBoundingClientRect().top;
+    const bodyOffset = document.body.getBoundingClientRect().top;
+    window.scrollTo({
+      top: elementRefOffset - bodyOffset,
+      behavior: 'smooth',
+    });
   };
 
   return (
@@ -27,24 +41,45 @@ const Navbar = () => {
         {/* INIT DESKTOP MENU SECTION */}
         <ul className="o-display-none o-display-lg-flex o-flex-gap-40">
           <li className="c-navbar__item">
-            <a href="#/home">Inicio</a>
+            <a href="#/" onClick={() => scrollToElement(0)}>
+              Inicio
+            </a>
           </li>
           <li className="c-navbar__item">
-            <a href="#/about">Nososotros</a>
+            <a href="#/" onClick={() => scrollToElement(1)}>
+              Nososotros
+            </a>
           </li>
           <li className="c-navbar__item">
-            <a href="#/services">Servicios</a>
+            <a href="#/" onClick={() => scrollToElement(2)}>
+              Servicios
+            </a>
           </li>
           <li className="c-navbar__item">
-            <a href="#/team">Equipo</a>
+            <a href="#/" onClick={() => scrollToElement(3)}>
+              Equipo
+            </a>
           </li>
           <li className="c-navbar__item">
-            <a href="#/customers">Clientes</a>
+            <a href="#/" onClick={() => scrollToElement(4)}>
+              Clientes
+            </a>
+          </li>
+          <li className="c-navbar__item">
+            <a href="#/" onClick={() => scrollToElement(5)}>
+              Galería
+            </a>
+          </li>
+          <li className="c-navbar__item">
+            <a href="#/" onClick={() => scrollToElement(6)}>
+              Ubicación
+            </a>
           </li>
         </ul>
         <button
           className="o-display-none o-display-lg-block c-button c-button--primary"
           type="button"
+          onClick={() => redirectToWhatsAppUtil()}
         >
           Contáctanos
         </button>
@@ -61,22 +96,34 @@ const Navbar = () => {
           <i className="c-navbar__mobile-icon fa-solid fa-xmark" />
         </span>
         <span className="o-p-4">
-          <a href="#/home">Inicio</a>
+          <a href="#/">Inicio</a>
         </span>
         <span className="o-p-4">
-          <a href="#/about">Nososotros</a>
+          <a href="#/">Nososotros</a>
         </span>
         <span className="o-p-4">
-          <a href="#/services">Servicios</a>
+          <a href="#/">Servicios</a>
         </span>
         <span className="o-p-4">
-          <a href="#/team">Equipo</a>
+          <a href="#/">Equipo</a>
         </span>
         <span className="o-p-4">
-          <a href="#/customers">Clientes</a>
+          <a href="#/">Clientes</a>
         </span>
         <span className="o-p-4">
-          <button className="c-button c-button--primary" type="button">
+          <a href="#/">Galería</a>
+        </span>
+        <span className="o-p-4">
+          <a href="#/">Ubicación</a>
+        </span>
+        <span className="o-p-4">
+          <button
+            className="c-button c-button--primary"
+            type="button"
+            onClick={() => {
+              window.open(`tel:${getCellPhoneUtil()}`);
+            }}
+          >
             Contáctanos
           </button>
         </span>

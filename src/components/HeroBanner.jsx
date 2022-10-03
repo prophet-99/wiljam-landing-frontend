@@ -4,50 +4,67 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 import Navbar from './Navbar';
 
-const HeroBanner = () => (
-  <section className="c-hero-banner">
-    {/* INIT BACKDROP SECTION */}
-    <StaticImage
-      alt="Hero banner"
-      src="https://images.unsplash.com/photo-1485452499676-62ab02c20e83?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-      className="c-hero-banner__image"
-    />
-    <div className="c-hero-banner__backdrop" />
-    {/* END BACKDROP SECTION */}
-    <div className="c-hero-banner__content">
-      {/* INIT NAVBAR SECTION */}
-      <Navbar />
-      {/* END NAVBAR SECTION */}
-      <div className="o-flex o-flex-column o-flex-xl-row o-flex-xl-align-center o-flex-equal o-flex-gap-64 o-flex-gap-xl-48  c-hero-banner__wrapper">
-        {/* INIT CONTENT SECTION */}
-        <article className="o-flex o-flex-column o-flex-align-center o-flex-justify-center o-p-16">
-          <span className="c-hero-banner__quote o-mb-16">
-            Habilitamos y comercializamos todo tipo de especies marinas
-          </span>
-          <h1 className="o-text-align-center o-mb-36 o-mb-sm-64 c-hero-banner__title">
-            <span className="o-color-neutral-white-100 o-display-block">
-              Contrata a la mejor
+const HeroBanner = () => {
+  const scrollToElement = (position) => {
+    const elementRef = document.querySelectorAll('.js-section')[position];
+    const elementRefOffset = elementRef.getBoundingClientRect().top;
+    const bodyOffset = document.body.getBoundingClientRect().top;
+    window.scrollTo({
+      top: elementRefOffset - bodyOffset,
+      behavior: 'smooth',
+    });
+  };
+
+  return (
+    <section className="c-hero-banner js-section">
+      {/* INIT BACKDROP SECTION */}
+      <StaticImage
+        className="c-hero-banner__image"
+        alt="Hero banner"
+        placeholder="tracedSVG"
+        src="https://images.unsplash.com/photo-1485452499676-62ab02c20e83?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+      />
+      <div className="c-hero-banner__backdrop" />
+      {/* END BACKDROP SECTION */}
+      <div className="c-hero-banner__content">
+        {/* INIT NAVBAR SECTION */}
+        <Navbar />
+        {/* END NAVBAR SECTION */}
+        <div className="o-flex o-flex-column o-flex-xl-row o-flex-xl-align-center o-flex-equal o-flex-gap-64 o-flex-gap-xl-48  c-hero-banner__wrapper">
+          {/* INIT CONTENT SECTION */}
+          <article className="o-flex o-flex-column o-flex-align-center o-flex-justify-center o-p-16">
+            <span className="c-hero-banner__quote o-mb-16">
+              Habilitamos y comercializamos todo tipo de especies marinas
             </span>
-            <span className="c-hero-banner__skew">Empresa pesquera</span>
-          </h1>
-          <button className="c-button c-button--secondary" type="button">
-            Leer historias de clientes
-          </button>
-        </article>
-        {/* END CONTENT SECTION */}
-        {/* INIT VIDEO SECTION */}
-        <article className="o-flex-equal">
-          <div className="c-hero-banner__video">
-            <iframe
-              src="https://www.youtube.com/embed/nUPeqT36w48"
-              title="Some title of video"
-              frameBorder="0"
-            />
-          </div>
-        </article>
-        {/* END VIDEO SECTION */}
+            <h1 className="o-text-align-center o-mb-36 o-mb-sm-64 c-hero-banner__title">
+              <span className="o-color-neutral-white-100 o-display-block">
+                Contrata a la mejor
+              </span>
+              <span className="c-hero-banner__skew">Empresa pesquera</span>
+            </h1>
+            <button
+              className="c-button c-button--secondary"
+              type="button"
+              onClick={() => scrollToElement(4)}
+            >
+              Leer historias de clientes
+            </button>
+          </article>
+          {/* END CONTENT SECTION */}
+          {/* INIT VIDEO SECTION */}
+          <article className="o-flex-equal">
+            <div className="c-hero-banner__video">
+              <iframe
+                src="https://www.youtube.com/embed/nUPeqT36w48"
+                title="Some title of video"
+                frameBorder="0"
+              />
+            </div>
+          </article>
+          {/* END VIDEO SECTION */}
+        </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 export default HeroBanner;
