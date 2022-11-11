@@ -1,0 +1,27 @@
+[
+  {
+    "id": "01",
+    "name": "Juan Llaxa Flores",
+    "workPosition": "Desarrollador"
+  },
+  {
+    "id": "02",
+    "name": "Maryuri Lopez Quinde",
+    "workPosition": "Relaciones internacionales"
+  },
+  {
+    "id": "03",
+    "name": "Marlene Ruiz Soldado",
+    "workPosition": "Recursos humanos"
+  },
+  {
+    "id": "04",
+    "name": "Wilmer Lopez",
+    "workPosition": "Gerente General"
+  },
+  {
+    "id": "05",
+    "name": "Sebastian Lopez",
+    "workPosition": "Contador"
+  }
+]

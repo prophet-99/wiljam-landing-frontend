@@ -1,16 +1,12 @@
 import React from 'react';
 
-import { StaticImage } from 'gatsby-plugin-image';
+import StatisticsSVG from '../assets/svg/about/statistics.inline.svg';
 
 const About = () => (
   <section className="o-container c-about o-flex o-flex-align-center o-flex-column o-flex-md-row o-flex-gap-32 js-section">
     {/* INIT IMAGE SECTION */}
     <article className="o-flex o-flex-align-center o-flex-justify-center o-flex-equal">
-      <StaticImage
-        alt="Statistics image"
-        src="../assets/svg/about/statistics.svg"
-        className="c-about__image"
-      />
+      <StatisticsSVG className="c-about__image" />
     </article>
     {/* END IMAGE SECTION */}
     {/* INIT CONTENT SECTION */}

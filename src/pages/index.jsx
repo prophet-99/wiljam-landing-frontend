@@ -1,6 +1,6 @@
 import React, { useLayoutEffect } from 'react';
 
-import { redirectToWhatsAppUtil } from '../utils/company.util';
+import useGetCompanyData from '../hooks/useGetCompanyData';
 import HeroBanner from '../components/HeroBanner';
 import About from '../components/About';
 import Services from '../components/Services';
@@ -13,12 +13,21 @@ import Footer from '../components/Footer';
 import Loader from '../components/Loader';
 
 const Index = () => {
+  const { companyPhone, whatsAppText } = useGetCompanyData();
+
   useLayoutEffect(() => {
     setTimeout(() => {
       document.querySelector('.js-loader').classList.add('is-loaded');
       document.querySelector('.js-content').classList.remove('is-loading');
     }, 1000);
   }, []);
+
+  const redirectToWhatsApp = () => {
+    window.open(
+      `https://api.whatsapp.com/send?phone=${companyPhone}&text=${whatsAppText}`,
+      '_blank'
+    );
+  };
 
   return (
     <>
@@ -37,7 +46,7 @@ const Index = () => {
       <button
         type="button"
         className="c-button c-button--whatsapp"
-        onClick={() => redirectToWhatsAppUtil()}
+        onClick={() => redirectToWhatsApp()}
       >
         <i className="fab fa-whatsapp" />
       </button>

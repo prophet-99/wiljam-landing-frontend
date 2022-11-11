@@ -2,8 +2,11 @@
 
 .c-about {
   &__image {
-    max-width: 25rem;
+    max-width: 100%;
     height: auto;
+    @include mixinsModule.mediaQueryFrom('sm') {
+      max-width: 25rem;
+    }
   }
   &__title {
     @include mixinsModule.getFontStyles('h1');

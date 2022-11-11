@@ -1,12 +1,11 @@
 import React from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
 
-import {
-  getCellPhoneUtil,
-  redirectToWhatsAppUtil,
-} from '../utils/company.util';
+import { StaticImage } from 'gatsby-plugin-image';
+import useGetCompanyData from '../hooks/useGetCompanyData';
 
 const Navbar = () => {
+  const { companyPhone, whatsAppText } = useGetCompanyData();
+
   const toggleMobileMenu = () => {
     document.querySelector('.js-navbar-mobile').classList.toggle('is-active');
   };
@@ -19,6 +18,13 @@ const Navbar = () => {
       top: elementRefOffset - bodyOffset,
       behavior: 'smooth',
     });
+  };
+
+  const redirectToWhatsApp = () => {
+    window.open(
+      `https://api.whatsapp.com/send?phone=${companyPhone}&text=${whatsAppText}`,
+      '_blank'
+    );
   };
 
   return (
@@ -79,7 +85,7 @@ const Navbar = () => {
         <button
           className="o-display-none o-display-lg-block c-button c-button--primary"
           type="button"
-          onClick={() => redirectToWhatsAppUtil()}
+          onClick={() => redirectToWhatsApp()}
         >
           Contáctanos
         </button>
@@ -96,32 +102,46 @@ const Navbar = () => {
           <i className="c-navbar__mobile-icon fa-solid fa-xmark" />
         </span>
         <span className="o-p-4">
-          <a href="#/">Inicio</a>
+          <a href="#/" onClick={() => scrollToElement(0)}>
+            Inicio
+          </a>
         </span>
         <span className="o-p-4">
-          <a href="#/">Nososotros</a>
+          <a href="#/" onClick={() => scrollToElement(1)}>
+            Nososotros
+          </a>
         </span>
         <span className="o-p-4">
-          <a href="#/">Servicios</a>
+          <a href="#/" onClick={() => scrollToElement(2)}>
+            Servicios
+          </a>
         </span>
         <span className="o-p-4">
-          <a href="#/">Equipo</a>
+          <a href="#/" onClick={() => scrollToElement(3)}>
+            Equipo
+          </a>
         </span>
         <span className="o-p-4">
-          <a href="#/">Clientes</a>
+          <a href="#/" onClick={() => scrollToElement(4)}>
+            Clientes
+          </a>
         </span>
         <span className="o-p-4">
-          <a href="#/">Galería</a>
+          <a href="#/" onClick={() => scrollToElement(5)}>
+            Galería
+          </a>
         </span>
         <span className="o-p-4">
-          <a href="#/">Ubicación</a>
+          <a href="#/" onClick={() => scrollToElement(6)}>
+            Ubicación
+          </a>
         </span>
         <span className="o-p-4">
           <button
             className="c-button c-button--primary"
             type="button"
             onClick={() => {
-              window.open(`tel:${getCellPhoneUtil()}`);
+              window.open(`tel:${companyPhone}`);
             }}
           >
             Contáctanos

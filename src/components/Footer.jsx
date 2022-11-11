@@ -1,10 +1,11 @@
 import React from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
 
-import { redirectToWhatsAppUtil } from '../utils/company.util';
+import { StaticImage } from 'gatsby-plugin-image';
+import useGetCompanyData from '../hooks/useGetCompanyData';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const { companyPhone, whatsAppText } = useGetCompanyData();
 
   const scrollToElement = (position) => {
     const elementRef = document.querySelectorAll('.js-section')[position];
@@ -14,6 +15,13 @@ const Footer = () => {
       top: elementRefOffset - bodyOffset,
       behavior: 'smooth',
     });
+  };
+
+  const redirectToWhatsApp = () => {
+    window.open(
+      `https://api.whatsapp.com/send?phone=${companyPhone}&text=${whatsAppText}`,
+      '_blank'
+    );
   };
 
   return (
@@ -74,7 +82,7 @@ const Footer = () => {
         <a
           className="c-footer__icon"
           href="/#"
-          onClick={() => redirectToWhatsAppUtil()}
+          onClick={() => redirectToWhatsApp()}
         >
           <i className="fa-brands fa-whatsapp" />
         </a>
