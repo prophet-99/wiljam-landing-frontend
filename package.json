@@ -16,6 +16,7 @@
   "dependencies": {
     "gatsby": "^4.22.1",
     "gatsby-plugin-image": "^2.22.0",
+    "gatsby-plugin-react-helmet": "^5.24.0",
     "gatsby-plugin-react-svg": "^3.1.0",
     "gatsby-plugin-sass": "^5.22.0",
     "gatsby-plugin-sharp": "^4.22.0",
@@ -23,6 +24,7 @@
     "gatsby-transformer-sharp": "^4.22.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-helmet": "^6.1.0",
     "sass": "^1.54.9",
     "swiper": "^8.4.2"
   },

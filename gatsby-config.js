@@ -8,14 +8,18 @@ module.exports = {
   /* Your site config here */
   // pathPrefix: '/public',
   siteMetadata: {
-    title: 'WILJAM - Empresa pesquera',
+    // TODO: INCLUIR TU PORTAFOLIO EN FOOTER
+    // TODO: MEJORAR METADATA: https://www.diamante.com.pe/#productos - VER EN REDES SOCIALES COMO SE VISUALIZA
+    title: 'Pesquera WILJAM - Conservas, pescado congelado',
     description:
       'Somos una empresa pesquera que ofrece diferentes servicios a la medida del cliente manteniendo la excelencia en lo que hacemos.',
-    author: '@prophet-99',
+    author: '@prophet_1999',
     authorName: 'Alexander Avila Briones',
     companyPhone: '+51932265652',
     whatsAppText:
       'Deseo%20más%20informacion%20acerca%20de%20los%20servicios%20que%20brindan',
+    keywords:
+      'empresa pesquera, vida marina, pesca, criaderos, procesamiento, productos marinos, congelados',
   },
   plugins: [
     'gatsby-plugin-sass',
@@ -37,5 +41,6 @@ module.exports = {
         },
       },
     },
+    'gatsby-plugin-react-helmet',
   ],
 };

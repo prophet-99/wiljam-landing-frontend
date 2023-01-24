@@ -5,7 +5,7 @@ import useGetCompanyData from '../hooks/useGetCompanyData';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const { companyPhone, whatsAppText } = useGetCompanyData();
+  const { companyPhone, whatsAppText, authorName } = useGetCompanyData();
 
   const scrollToElement = (position) => {
     const elementRef = document.querySelectorAll('.js-section')[position];
@@ -89,10 +89,11 @@ const Footer = () => {
       </article>
       {/* END SOCIAL NETWORKS */}
       {/* INIT INFO SECTION */}
-      <p className="o-color-neutral-lead-100 o-text-align-center o-mb-0 c-footer__copyright">
+      <p className="o-color-neutral-lead-100 o-text-align-center o-mb-40 c-footer__copyright">
         © Copyright {currentYear}, WILJAM SAC. <br />
         Todos los derechos reservados.
       </p>
+      <small className="o-mb-0">Powered by {authorName} 🐱‍👤</small>
       {/* END INFO SECTION */}
     </section>
   );

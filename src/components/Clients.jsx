@@ -45,7 +45,7 @@ const Clients = () => {
           onSlideChange={(s) => setCurrentClient(clientsDataJSON[s.realIndex])}
         >
           {clientsImgs.edges.map((img) => (
-            <SwiperSlide>
+            <SwiperSlide key={img.node.base.split('.')[0]}>
               <GatsbyImage
                 className="c-clients__swiper-img"
                 fluid={img.node.childImageSharp.fluid}

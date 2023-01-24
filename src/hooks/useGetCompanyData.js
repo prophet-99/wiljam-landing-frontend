@@ -11,6 +11,7 @@ const useGetCompanyData = () => {
           authorName
           companyPhone
           whatsAppText
+          keywords
         }
       }
     }

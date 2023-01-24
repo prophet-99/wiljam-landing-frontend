@@ -11,6 +11,7 @@ import Gallery from '../components/Gallery';
 import Ubication from '../components/Ubication';
 import Footer from '../components/Footer';
 import Loader from '../components/Loader';
+import SEO from '../components/SEO';
 
 const Index = () => {
   const { companyPhone, whatsAppText } = useGetCompanyData();
@@ -31,6 +32,7 @@ const Index = () => {
 
   return (
     <>
+      <SEO />
       <main className="c-loader-content is-loading js-content">
         <HeroBanner />
         <About />
