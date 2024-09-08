@@ -14,7 +14,7 @@ module.exports = {
     description:
       'Somos una empresa pesquera que ofrece diferentes servicios a la medida del cliente manteniendo la excelencia en lo que hacemos.',
     author: '@prophet_1999',
-    authorName: 'prophet-99',
+    authorName: 'Prophet Code',
     companyPhone: '+51932265652',
     whatsAppText:
       'Deseo%20más%20informacion%20acerca%20de%20los%20servicios%20que%20brindan',
