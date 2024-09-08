@@ -4,7 +4,7 @@
 2 - Fotos Equipo
 3 - Clientes (Fotos) o testimonios de trabajadores
 
-# TEXTP
+# TEXTO
 
 2 - Texto de cada sección
 

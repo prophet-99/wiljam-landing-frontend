@@ -6,7 +6,7 @@
 
 module.exports = {
   /* Your site config here */
-  // pathPrefix: '/public',
+  pathPrefix: '/wiljam-landing-frontend',
   siteMetadata: {
     // TODO: INCLUIR TU PORTAFOLIO EN FOOTER
     // TODO: MEJORAR METADATA: https://www.diamante.com.pe/#productos - VER EN REDES SOCIALES COMO SE VISUALIZA
